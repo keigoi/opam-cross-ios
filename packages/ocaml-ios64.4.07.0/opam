@@ -1,0 +1,30 @@
+opam-version: "1.2"
+maintainer: "whitequark@whitequark.org"
+hide-patches: ["patches/alignment.patch"]
+patches: [
+  "patches/assembler.patch"
+]
+substs: [
+  "config/Makefile"
+  "ios.conf"
+]
+build: [
+  [make "-j%{jobs}%" "world"]
+  [make "-j%{jobs}%" "opt"]
+  [make "-j%{jobs}%" "install"]
+  ["./install.sh" "%{prefix}%"]
+]
+remove: [
+  ["./remove.sh" "%{prefix}%"]
+]
+depends: [
+  "ocamlfind" {>= "1.5.4"}
+  "conf-ios"
+]
+depopts: [
+  "conf-flambda-ios"
+]
+conflicts: [
+  "ocaml-ios32"
+]
+available: [ ocaml-version = "4.07.0" & (conf-ios:arch = "arm64" | conf-ios:arch = "amd64") ]
