@@ -2,7 +2,7 @@ opam-version: "1.2"
 maintainer: "whitequark@whitequark.org"
 hide-patches: ["patches/alignment.patch"]
 patches: [
-  "patches/assembler.patch"
+  "patches/ios.patch"
 ]
 substs: [
   "config/Makefile"
@@ -23,6 +23,7 @@ depends: [
 ]
 depopts: [
   "conf-flambda-ios"
+  "conf-no-flat-float-array-ios"
 ]
 conflicts: [
   "ocaml-ios32"
