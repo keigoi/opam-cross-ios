@@ -7,4 +7,4 @@ build: [
   ["env" "OCAMLFIND_TOOLCHAIN=ios" "ocaml" "setup.ml" "-install"]
 ]
 remove: [["ocamlfind" "-toolchain" "ios" "remove" "re"]]
-depends: ["ocaml-ios" "ocamlfind"]
+depends: ["ocaml-ios" "ocamlfind" "ocamlbuild" "base-bytes"]
