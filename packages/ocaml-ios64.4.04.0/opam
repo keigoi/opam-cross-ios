@@ -22,4 +22,4 @@ depopts: [
 conflicts: [
   "ocaml-ios32"
 ]
-available: [ ocaml-version = "4.04.0" & (conf-ios:arch = "arm64" | conf-ios:arch = "amd64") ]
+available: [ ocaml-version = "4.04.0" & (conf-ios-arch = "arm64" | conf-ios-arch = "amd64") ]

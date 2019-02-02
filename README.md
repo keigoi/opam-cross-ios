@@ -31,23 +31,27 @@ Pin some prerequisite packages that don't yet have fixes merged upstream:
 
 Configure the compiler for 32-bit ARM:
 
-    ARCH=arm SUBARCH=armv7s PLATFORM=iPhoneOS SDK=9.3 VER=8.0 \
-      opam install conf-ios
+    (export ARCH=arm SUBARCH=armv7s PLATFORM=iPhoneOS SDK=11.2 VER=8.0 \
+      && opam config set conf-ios-arch $ARCH \
+      && opam install conf-ios)
 
 ... for 64-bit ARM
 
-    ARCH=arm64 SUBARCH=arm64 PLATFORM=iPhoneOS SDK=9.3 VER=8.0 \
-      opam install conf-ios
+    (export ARCH=arm64 SUBARCH=arm64 PLATFORM=iPhoneOS SDK=11.2 VER=8.0 \
+      && opam config set conf-ios-arch $ARCH \
+      && opam install conf-ios)
 
 ... for 32-bit x86:
 
-    ARCH=i386 SUBARCH=i386 PLATFORM=iPhoneSimulator SDK=9.3 VER=8.0 \
-      opam install conf-ios
+    (export ARCH=i386 SUBARCH=i386 PLATFORM=iPhoneSimulator SDK=11.2 VER=8.0 \
+      && opam config set conf-ios-arch $ARCH \
+      && opam install conf-ios)
 
 ... for 64-bit x86:
 
-    ARCH=amd64 SUBARCH=x86_64 PLATFORM=iPhoneSimulator SDK=9.3 VER=8.0 \
-      opam install conf-ios
+    (export ARCH=amd64 SUBARCH=x86_64 PLATFORM=iPhoneSimulator SDK=11.2 VER=8.0 \
+      && opam config set conf-ios-arch $ARCH \
+      && opam install conf-ios)
 
 Some options can be further tweaked:
 
