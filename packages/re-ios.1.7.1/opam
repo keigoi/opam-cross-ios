@@ -4,6 +4,8 @@ build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%/ios-sysroot"
                                    "--override" "native_dynlink" "false"]
   ["env" "OCAMLFIND_TOOLCHAIN=ios" "ocaml" "setup.ml" "-build"]
+]
+install: [
   ["env" "OCAMLFIND_TOOLCHAIN=ios" "ocaml" "setup.ml" "-install"]
 ]
 remove: [["ocamlfind" "-toolchain" "ios" "remove" "re"]]
