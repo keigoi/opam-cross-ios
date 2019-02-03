@@ -6,7 +6,10 @@ substs: [
   "ios.conf"
 ]
 build: [
-  [make "world" "opt" "install"]
+  [make "world" "opt"]
+]
+install: [
+  [make "install"]
   ["./install.sh" "%{prefix}%"]
 ]
 remove: [
