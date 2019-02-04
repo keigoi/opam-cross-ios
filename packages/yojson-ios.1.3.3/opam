@@ -3,6 +3,8 @@ maintainer: "whitequark@whitequark.org"
 patches: ["patches/natdynlink-false.patch"]
 build: [
   ["env" "OCAMLFIND_TOOLCHAIN=ios" make]
+]
+install: [
   ["env" "OCAMLFIND_TOOLCHAIN=ios" make "install"]
 ]
 remove: [["ocamlfind" "-toolchain" "ios" "remove" "yojson"]]

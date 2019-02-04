@@ -5,6 +5,8 @@ license: "BSD-3-Clause"
 build: [
   ["env" "OCAMLFIND_TOOLCHAIN=ios" make "byte" "opt" "META"]
   # https://github.com/mjambon/biniou/issues/15
+]
+install: [
   ["env" "OCAMLFIND_TOOLCHAIN=ios" make "BINDIR=%{prefix}%/ios-sysroot/bin" "install"]
 ]
 remove: [["ocamlfind" "-toolchain" "ios" "remove" "biniou"]]
