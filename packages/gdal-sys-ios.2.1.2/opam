@@ -13,8 +13,42 @@ build: [
                  "--without-gif"     # error: implicit declaration of `close`
                  "--without-sqlite3" # confused with the OS X one
                  "--without-xml2"    # confused with the OS X one
-                 "CPPFLAGS=%{conf-ios:cflags}%"
-                 "LDFLAGS=%{conf-ios:ldflags}%"
+
+#		 "--without-grib"    # MGH: vaprint warning
+#		 "--without-png"
+#		 "--without-jpeg"
+#		 "--without-jp2mrsid"
+
+#		 "--with-png=%{libpng-sys-ios}" # didn't work
+#                 "LIBPNG_CFLAGS=%{libpng-sys-ios:cflags}%" #not recognized by gdal
+#                 "LIBPNG_LIBS=%{libpng-sys-ios:ldflags}%" #not recognized by gdal
+#		 "--with-png=no" # other packages still expect png library
+
+# Also needs addition to CPPFLAGS and LDFLAGS
+		 "--with-png=%{prefix}%/ios-deps/libpng"
+
+		 # Added for simulator, which seems to pickup system
+		 # libraries because of the similar processor
+		 "--without-cfitsio"
+		 "--without-jasper"
+		 "--without-hdf5"
+		 "--without-odbc"
+		 "--with-libtiff=internal"
+		 "--with-geotiff=internal"
+		 "--with-libjson-c=internal"
+
+		 # Remove as much as possible
+                 "--without-grib"
+                 "--without-dods"
+                 "--without-xerces"
+		 "--without-geos"
+		 "--without-expat"
+		 "--without-curl"
+		 "--without-mrf"
+
+		 # Note png stuff as well
+                 "CPPFLAGS=%{conf-ios:cflags}% -I%{prefix}%/ios-deps/libpng/include/libpng16"
+                 "LDFLAGS=%{conf-ios:ldflags}% -L%{prefix}%/ios-deps/libpng/lib"
                  "CC=" "CXX="]
   ["make" "-j" jobs "-C" "port"]
   ["make" "-j" jobs "-C" "alg"]
@@ -26,6 +60,11 @@ build: [
 ]
 install: [
   ["make" "install-lib"]
+# ["make" "install-static-lib"]
+  ["mkdir" "%{prefix}%/ios-deps/gdal/include"]
+  ["make" "-C" "port" "install"]
+  ["make" "-C" "gcore" "install"]
+  ["make" "-C" "ogr" "install"]
 ]
 remove:  [["rm" "-rf" "%{prefix}%/ios-deps/gdal"]]
-depends: ["conf-ios"]
+depends: ["conf-ios" "libpng-sys-ios"]
