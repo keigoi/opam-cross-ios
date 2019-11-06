@@ -22,6 +22,6 @@ extra-files: [
 ]
 url {
   src:
-    "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.26.tar.gz"
-  checksum: "md5=236cd975520fc1f34cc0b8f0e615f7a0"
+    "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.37.tar.gz"
+  checksum: "md5=6c7519f6c75939efa0ed3053197abd54"
 }

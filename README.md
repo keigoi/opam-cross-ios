@@ -1,3 +1,13 @@
+
+## FORK of whitequark/opam-cross-ios
+
+This repository merge changes from
+- keigoi/master
+- markghayden/master
+- rigdern/master
+
+The goal is to provide an update iOS toolchain for OCaml 4.07+
+
 opam-cross-ios
 ==============
 
@@ -12,7 +22,7 @@ Installation
 
 Add this repository to OPAM:
 
-    opam repository add ios git://github.com/whitequark/opam-cross-ios
+    opam repository add ios git://github.com/abate/opam-cross-ios
 
 Switch to 32-bit compiler when compiling for 32-bit targets:
 
