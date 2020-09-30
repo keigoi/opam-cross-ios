@@ -37,6 +37,6 @@ extra-files: [
 ]
 url {
   src:
-    "https://github.com/whitequark/ocaml/archive/1512603f6c824a12382ac24fcbbc08145f679b76.zip"
-  checksum: "md5=0ebfff9e4bf6bc80e33143368f4cc035"
+    "https://github.com/keigoi/ocaml/archive/fbffe1b1cff7634781c503424a9fd619b56370ac.zip"
+  checksum: "md5=13c611c11246be552d1a29340fd9268c"
 }
