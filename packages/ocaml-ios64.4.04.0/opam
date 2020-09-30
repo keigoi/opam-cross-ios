@@ -1,6 +1,5 @@
 opam-version: "2.0"
 maintainer: "whitequark@whitequark.org"
-patches: ["patches/alignment.patch"]
 substs: [
   "config/Makefile"
   "ios.conf"
