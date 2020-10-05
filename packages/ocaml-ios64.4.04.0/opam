@@ -33,7 +33,7 @@ extra-files: [
   ["install.sh" "md5=b3badf88c7411c19d301e750a08917e1"]
   ["config/s.h" "md5=a6073d22d6b9283d3d6cd55303aa2c1e"]
   ["config/m.h" "md5=85c3a24ca39266e9832b5f88f5c14eb4"]
-  ["config/Makefile.in" "md5=a718c1b94d7bc9b9e670a0ba7437387c"]
+  ["config/Makefile.in" "md5=725ddd88666efee0b6c2c7daf2b0e3a6"]
 ]
 url {
   src:
