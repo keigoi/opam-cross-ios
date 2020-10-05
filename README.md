@@ -22,7 +22,7 @@ Installation
 
 Add this repository to OPAM:
 
-    opam repository add ios git://github.com/abate/opam-cross-ios
+    opam repository add ios git://github.com/keigoi/opam-cross-ios
 
 Switch to 32-bit compiler when compiling for 32-bit targets:
 
@@ -39,7 +39,15 @@ Pin some prerequisite packages that don't yet have fixes merged upstream:
     opam pin add ocamlbuild https://github.com/ocaml/ocamlbuild.git
     opam pin add topkg https://github.com/whitequark/topkg.git#ios
 
-Configure the compiler for 32-bit ARM:
+Configure the compiler. For version strings `SDK` and `VER` below, see
+
+- `/Applications/Xcode.app/Contents/Developer//Platforms/iPhoneOS.platform/Developer/SDKs/`
+- `/Applications/Xcode.app/Contents/Developer//Platforms/iPhoneSimulator.platform/Developer/SDKs/`
+
+and you will find `iPhoneOS13.4.sdk` or `iPhoneSimulator13.4.sdk` and so on.
+Then put the version number `SDK=13.4` (and `VER` which is the minimal version required to compile).
+
+... for 32-bit ARM:
 
     (export ARCH=arm SUBARCH=armv7s PLATFORM=iPhoneOS SDK=11.2 VER=8.0 \
       && opam config set conf-ios-arch $ARCH \
