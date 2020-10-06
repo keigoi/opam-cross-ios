@@ -25,7 +25,6 @@ depopts: [
 conflicts: [
   "ocaml-ios32"
 ]
-available: [ ocaml-version = "4.04.0" & (conf-ios-arch = "arm64" | conf-ios-arch = "amd64") ]
 synopsis: "OCaml cross-compiler for 64-bit x86 and ARM iOS targets"
 extra-files: [
   ["remove.sh" "md5=d8660f646b5a3155094e68d25ef00ff9"]
