@@ -4,18 +4,20 @@ authors: ["Daniel de Rauglaudre"]
 homepage: "https://camlp5.github.io"
 license: "BSD-3-Clause"
 build: [
-  ["sh" "./ios-install.sh"]
+  ["sh" "./ios-build.sh"]
 ]
 dev-repo: "git+https://github.com/keigoi/camlp5.git"
 doc: "https://camlp5.github.io/doc/html"
-install: [make "install"]
+install: [
+  ["sh" "./ios-install.sh"]
+]
 synopsis: "Preprocessor-pretty-printer of OCaml (for iOS)"
 depends: [
   "ocaml-ios" {>= "4.02" & <= "4.08.0"}
 ]
 extra-files: [
-    ["camlp5.install" "md5=9aa275ca7d8612b09aa3ba670c083a64"]
-    ["ios-install.sh" "md5=f5bda2db5ca5e76dd30f360807ee2191"]
+    ["ios-build.sh" "md5=93b843772ee94fcfb38795c643afba76"]
+    ["ios-install.sh" "md5=3cf30d1a3cef10a9e052c865703d24c1"]
 ]
 url {
   src: "https://github.com/camlp5/camlp5/archive/f5ab12b2ddd71868ee117414403430f0e7290f9e.zip"
