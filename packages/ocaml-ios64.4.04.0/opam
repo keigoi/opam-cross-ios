@@ -29,7 +29,7 @@ synopsis: "OCaml cross-compiler for 64-bit x86 and ARM iOS targets"
 extra-files: [
   ["remove.sh" "md5=d8660f646b5a3155094e68d25ef00ff9"]
   ["ios.conf.in" "md5=52c667a467d307094d2eba884d408c96"]
-  ["install.sh" "md5=b3badf88c7411c19d301e750a08917e1"]
+  ["install.sh" "md5=c169a80350366e48bcb458b66849ea39"]
   ["config/s.h" "md5=a6073d22d6b9283d3d6cd55303aa2c1e"]
   ["config/m.h" "md5=85c3a24ca39266e9832b5f88f5c14eb4"]
   ["config/Makefile.in" "md5=8c7e9e72dba5409cd7871c8003340450"]
