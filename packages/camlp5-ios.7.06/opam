@@ -20,6 +20,6 @@ extra-files: [
     ["ios-install.sh" "md5=3cf30d1a3cef10a9e052c865703d24c1"]
 ]
 url {
-  src: "https://github.com/camlp5/camlp5/archive/f5ab12b2ddd71868ee117414403430f0e7290f9e.zip"
+  src: "https://github.com/keigoi/camlp5/archive/f5ab12b2ddd71868ee117414403430f0e7290f9e.zip"
   checksum: "md5=41d9fc9c8ca6cfc8d647b2ae18015fc4"
 }
