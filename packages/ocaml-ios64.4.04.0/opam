@@ -9,7 +9,7 @@ build: [
 ]
 install: [
   [make "install"]
-  ["./install.sh" "%{prefix}%"]
+  # ["./install.sh" "%{prefix}%"]
 ]
 remove: [
   ["./remove.sh" "%{prefix}%"]
